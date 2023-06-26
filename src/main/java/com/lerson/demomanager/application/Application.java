@@ -1,4 +1,4 @@
-package com.lerson.demomanager;
+package com.lerson.demomanager.application;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

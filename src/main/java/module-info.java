@@ -7,4 +7,6 @@ module com.lerson.demomanager {
                         
     opens com.lerson.demomanager to javafx.fxml;
     exports com.lerson.demomanager;
+    exports com.lerson.demomanager.application;
+    opens com.lerson.demomanager.application to javafx.fxml;
 }
