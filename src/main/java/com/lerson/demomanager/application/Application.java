@@ -1,16 +1,17 @@
-package com.lerson.demomanager;
+package com.lerson.demomanager.application;
 
-import javafx.application.Application;
+import com.lerson.demomanager.utils.FXMLPath;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class Application extends javafx.application.Application {
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader root = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+        FXMLLoader root = new FXMLLoader(getClass().getResource(FXMLPath.createFXMLPath("main-view.fxml")));
         Scene scene = new Scene(root.load(), 320, 240);
         stage.setTitle("Hello!");
         stage.setScene(scene);
