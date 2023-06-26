@@ -11,9 +11,10 @@ public class Application extends javafx.application.Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader root = new FXMLLoader(getClass().getResource(FXMLPath.createFXMLPath("main-view.fxml")));
-        Scene scene = new Scene(root.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader root = new FXMLLoader(getClass().getResource(FXMLPath.createFXMLPath("login-view.fxml")));
+        Scene scene = new Scene(root.load());
+        stage.setTitle("Entrar");
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
