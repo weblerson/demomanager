@@ -9,4 +9,6 @@ module com.lerson.demomanager {
     exports com.lerson.demomanager;
     exports com.lerson.demomanager.application;
     opens com.lerson.demomanager.application to javafx.fxml;
+    exports com.lerson.demomanager.controllers;
+    opens com.lerson.demomanager.controllers to javafx.fxml;
 }
