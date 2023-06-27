@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="moved MainViewController to controllers package">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/utils/FXMLPath.java" afterDir="false" />
+    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="created util class for sha256 criptography">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/application/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/LoginViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -44,17 +45,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;rename__default&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "login__view",
+    "last_opened_file_path": "/home/weblerson/.jdks/corretto-17.0.5/lib/src.zip",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -112,7 +123,87 @@
       <option name="project" value="LOCAL" />
       <updated>1687798227274</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed identation">
+      <option name="closed" value="true" />
+      <created>1687806406323</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687806406323</updated>
+    </task>
+    <task id="LOCAL-00008" summary="created the login view design">
+      <option name="closed" value="true" />
+      <created>1687806418032</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687806418032</updated>
+    </task>
+    <task id="LOCAL-00009" summary="made login-view the first view and set it not resizable">
+      <option name="closed" value="true" />
+      <created>1687806459926</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1687806459926</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added the inputs' id's and function to submit button">
+      <option name="closed" value="true" />
+      <created>1687889746945</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687889746945</updated>
+    </task>
+    <task id="LOCAL-00011" summary="ignored db.properties file">
+      <option name="closed" value="true" />
+      <created>1687893427600</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1687893427600</updated>
+    </task>
+    <task id="LOCAL-00012" summary="created class for DB Connection">
+      <option name="closed" value="true" />
+      <created>1687893443369</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1687893443370</updated>
+    </task>
+    <task id="LOCAL-00013" summary="created personalized exceptions to db package">
+      <option name="closed" value="true" />
+      <created>1687893466301</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1687893466301</updated>
+    </task>
+    <task id="LOCAL-00014" summary="required java.sql lib">
+      <option name="closed" value="true" />
+      <created>1687893487959</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1687893487959</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added postgresql's jdbc driver on maven's dependencies">
+      <option name="closed" value="true" />
+      <created>1687893517419</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1687893517419</updated>
+    </task>
+    <task id="LOCAL-00016" summary="created util class for sha256 criptography">
+      <option name="closed" value="true" />
+      <created>1687893535889</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1687893535889</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +227,17 @@
     <MESSAGE value="moved Application.java to com.lerson.demomanager.application package" />
     <MESSAGE value="renamed HelloController.java to MainViewController.java" />
     <MESSAGE value="moved MainViewController to controllers package" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved MainViewController to controllers package" />
+    <MESSAGE value="fixed identation" />
+    <MESSAGE value="created the login view design" />
+    <MESSAGE value="made login-view the first view and set it not resizable" />
+    <MESSAGE value="added the inputs' id's and function to submit button" />
+    <MESSAGE value="ignored db.properties file" />
+    <MESSAGE value="created class for DB Connection" />
+    <MESSAGE value="created personalized exceptions to db package" />
+    <MESSAGE value="required java.sql lib" />
+    <MESSAGE value="added postgresql's jdbc driver on maven's dependencies" />
+    <MESSAGE value="created util class for sha256 criptography" />
+    <option name="LAST_COMMIT_MESSAGE" value="created util class for sha256 criptography" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
