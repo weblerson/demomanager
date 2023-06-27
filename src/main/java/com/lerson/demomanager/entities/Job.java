@@ -4,9 +4,9 @@ import java.time.LocalDateTime;
 
 public class Job {
 
-    private Integer id;
-    private String clientName;
-    private Integer type;
+    private final Integer id;
+    private final String clientName;
+    private final Integer type;
     private Integer status;
     private LocalDateTime deadline;
     private String description;

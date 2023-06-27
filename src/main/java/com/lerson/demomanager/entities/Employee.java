@@ -4,10 +4,10 @@ import java.time.LocalDate;
 
 public class Employee {
 
-    private Integer id;
-    private String name;
-    private String cpf;
-    private LocalDate birthDate;
+    private final Integer id;
+    private final String name;
+    private final String cpf;
+    private final LocalDate birthDate;
     private String email;
     private Boolean isAdmin;
     private Double baseSalary;
