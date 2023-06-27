@@ -1,4 +1,5 @@
 module com.lerson.demomanager {
+    requires java.sql;
     requires javafx.controls;
     requires javafx.fxml;
             
