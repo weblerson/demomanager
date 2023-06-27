@@ -8,7 +8,7 @@ public class SHA256 {
 
     public static String parse(String text) {
 
-        StringBuilder hexString = null;
+        StringBuilder hexString = new StringBuilder();
 
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
