@@ -140,7 +140,7 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
             Connection conn = DB.getConnection();
 
             String query = "UPDATE employee " +
-                    "SET email = ?, isadmin = ?, basesalary = ?, username = ?;";
+                            "SET email = ?, isadmin = ?, basesalary = ?, username = ?;";
             st = conn.prepareStatement(query);
             st.setString(1, employee.getEmail());
             st.setBoolean(2, employee.getAdmin());
@@ -162,7 +162,28 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
 
     @Override
     public Integer delete(Integer id) {
-        return null;
+        PreparedStatement st = null;
+        Integer rowsAffected;
+
+        try {
+            Connection conn = DB.getConnection();
+
+            String query = "DELETE employee " +
+                            "WHERE employee.id = ?;";
+            st = conn.prepareStatement(query);
+            st.setInt(1, id);
+
+            rowsAffected = st.executeUpdate();
+        }
+        catch (SQLException e) {
+            throw new DBException(e.getMessage());
+        }
+        finally {
+            DB.closeStatement(st);
+            DB.closeConnection();
+        }
+
+        return rowsAffected;
     }
 
     private static Employee createEmployee(ResultSet rs) {
