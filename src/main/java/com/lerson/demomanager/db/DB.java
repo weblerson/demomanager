@@ -6,9 +6,7 @@ import com.lerson.demomanager.db.exceptions.DBPropertiesNotFound;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
 
 public class DB {
@@ -41,6 +39,24 @@ public class DB {
         try {
             conn.close();
             conn = null;
+        }
+        catch (SQLException e) {
+            throw new DBException(e.getMessage());
+        }
+    }
+
+    public static void closeStatement(Statement st) {
+        try {
+            st.close();
+        }
+        catch (SQLException e) {
+            throw new DBException(e.getMessage());
+        }
+    }
+
+    public static void closeResultSet(ResultSet rs) {
+        try {
+            rs.close();
         }
         catch (SQLException e) {
             throw new DBException(e.getMessage());
