@@ -18,6 +18,7 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
     public Employee getById(Integer id) {
         PreparedStatement st = null;
         ResultSet rs = null;
+        Employee employee = null;
 
         try {
             Connection conn = DB.getConnection();
@@ -29,20 +30,8 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
             rs = st.executeQuery();
 
             while (rs.next()) {
-                String name = rs.getString("name");
-                String cpf = rs.getString("cpf");
-                Date birthDate = rs.getDate("birthDate");
-                String email = rs.getString("email");
-                Boolean isAdmin = rs.getBoolean("isadmin");
-                Double baseSalary = rs.getDouble("basesalary");
-                String username = rs.getString("username");
-
-                Employee employee = new Employee(id, name, cpf, birthDate, email, isAdmin, baseSalary, username);
-
-                return employee;
+                employee = createEmployee(rs);
             }
-
-            throw new DBException("Invalid id!");
         }
         catch (SQLException e) {
             throw new DBException(e.getMessage());
@@ -52,6 +41,12 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
             DB.closeResultSet(rs);
             DB.closeConnection();
         }
+
+        if (employee == null) {
+            throw new DBException("Invalid ID!");
+        }
+
+        return employee;
     }
 
     @Override
@@ -70,15 +65,7 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
 
             rs = st.executeQuery();
             while (rs.next()) {
-                String name = rs.getString("name");
-                String cpf = rs.getString("cpf");
-                Date birthDate = rs.getDate("birthDate");
-                String email = rs.getString("email");
-                Boolean isAdmin = rs.getBoolean("isadmin");
-                Double baseSalary = rs.getDouble("basesalary");
-                String username = rs.getString("username");
-
-                Employee employee = new Employee(id, name, cpf, birthDate, email, isAdmin, baseSalary, username);
+                Employee employee = createEmployee(rs);
                 dbQuery.add(employee);
             }
         }
@@ -107,5 +94,23 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
     @Override
     public Integer delete(Integer id) {
         return null;
+    }
+
+    private static Employee createEmployee(ResultSet rs) {
+        try {
+            Integer id = rs.getInt("id");
+            String name = rs.getString("name");
+            String cpf = rs.getString("cpf");
+            Date birthDate = rs.getDate("birthDate");
+            String email = rs.getString("email");
+            Boolean isAdmin = rs.getBoolean("isadmin");
+            Double baseSalary = rs.getDouble("basesalary");
+            String username = rs.getString("username");
+
+            return new Employee(id, name, cpf, birthDate, email, isAdmin, baseSalary, username);
+        }
+        catch (SQLException e) {
+            throw new DBException(e.getMessage());
+        }
     }
 }
