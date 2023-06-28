@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Employee {
 
-    private final Integer id;
+    private Integer id;
     private final String name;
     private final String cpf;
     private final LocalDate birthDate;
@@ -12,6 +12,17 @@ public class Employee {
     private Boolean isAdmin;
     private Double baseSalary;
     private String username;
+
+    public Employee(String name, String cpf, LocalDate birthDate, String email,
+                    Boolean isAdmin, Double baseSalary, String username) {
+        this.name = name;
+        this.cpf = cpf;
+        this.birthDate = birthDate;
+        this.email = email;
+        this.isAdmin = isAdmin;
+        this.baseSalary = baseSalary;
+        this.username = username;
+    }
 
     public Employee(Integer id, String name, String cpf, LocalDate birthDate,
                     String email, Boolean isAdmin, Double baseSalary, String username) {
