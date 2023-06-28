@@ -1,5 +1,8 @@
 package com.lerson.demomanager.entities;
 
+import com.lerson.demomanager.dao.EmployeeDAO;
+import com.lerson.demomanager.impl.EmployeeDAOJDBC;
+
 import java.util.Date;
 
 public class Employee {
@@ -12,6 +15,7 @@ public class Employee {
     private Boolean isAdmin;
     private Double baseSalary;
     private String username;
+    private EmployeeDAO employeeDao = new EmployeeDAOJDBC();
 
     public Employee(String name, String cpf, Date birthDate, String email,
                     Boolean isAdmin, Double baseSalary, String username) {
@@ -96,5 +100,11 @@ public class Employee {
                 ", baseSalary=" + baseSalary +
                 ", username='" + username + '\'' +
                 ')';
+    }
+
+    public Employee get(Integer id) {
+        Employee employee = this.employeeDao.getById(id);
+
+        return employee;
     }
 }
