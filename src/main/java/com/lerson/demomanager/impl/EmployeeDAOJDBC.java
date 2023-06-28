@@ -27,7 +27,7 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
         try {
             Connection conn = DB.getConnection();
 
-            String query = "SELECT * FROM employee" +
+            String query = "SELECT * FROM employee " +
                     "WHERE employee.id = ?;";
             st = conn.prepareStatement(query);
             st.setInt(1, id);
@@ -62,7 +62,7 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
         try {
             Connection conn = DB.getConnection();
 
-            String query = "SELECT * FROM employee" +
+            String query = "SELECT * FROM employee " +
                     "WHERE employee.id = ?;";
             st = conn.prepareStatement(query);
             st.setInt(1, id);
@@ -94,8 +94,8 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
         try {
             Connection conn = DB.getConnection();
 
-            String query = "INSERT INTO employee" +
-                    "(name, cpf, birthdate, email, isadmin, basesalary, username)" +
+            String query = "INSERT INTO employee " +
+                    "(name, cpf, birthdate, email, isadmin, basesalary, username) " +
                     "VALUES (?, ?, ?, ?, ?, ?, ?);";
             st = conn.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
             st.setString(1, employee.getName());
@@ -133,7 +133,31 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
 
     @Override
     public Integer update(Employee employee) {
-        return null;
+        PreparedStatement st = null;
+        Integer rowsAffected;
+
+        try {
+            Connection conn = DB.getConnection();
+
+            String query = "UPDATE employee " +
+                    "SET email = ?, isadmin = ?, basesalary = ?, username = ?;";
+            st = conn.prepareStatement(query);
+            st.setString(1, employee.getEmail());
+            st.setBoolean(2, employee.getAdmin());
+            st.setDouble(3, employee.getBaseSalary());
+            st.setString(4, employee.getUsername());
+
+            rowsAffected = st.executeUpdate();
+        }
+        catch (SQLException e) {
+            throw new DBException(e.getMessage());
+        }
+        finally {
+            DB.closeStatement(st);
+            DB.closeConnection();
+        }
+
+        return rowsAffected;
     }
 
     @Override
