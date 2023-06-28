@@ -111,4 +111,10 @@ public class Employee {
 
         return employee;
     }
+
+    public DBQuery<Employee> find(Integer id) {
+        DBQuery<Employee> employees = this.employeeDao.findById(id);
+
+        return employees;
+    }
 }
