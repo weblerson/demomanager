@@ -1,19 +1,19 @@
 package com.lerson.demomanager.entities;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Employee {
 
     private Integer id;
     private final String name;
     private final String cpf;
-    private final LocalDate birthDate;
+    private final Date birthDate;
     private String email;
     private Boolean isAdmin;
     private Double baseSalary;
     private String username;
 
-    public Employee(String name, String cpf, LocalDate birthDate, String email,
+    public Employee(String name, String cpf, Date birthDate, String email,
                     Boolean isAdmin, Double baseSalary, String username) {
         this.name = name;
         this.cpf = cpf;
@@ -24,7 +24,7 @@ public class Employee {
         this.username = username;
     }
 
-    public Employee(Integer id, String name, String cpf, LocalDate birthDate,
+    public Employee(Integer id, String name, String cpf, Date birthDate,
                     String email, Boolean isAdmin, Double baseSalary, String username) {
         this.id = id;
         this.name = name;
@@ -48,7 +48,7 @@ public class Employee {
         return cpf;
     }
 
-    public LocalDate getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
