@@ -2,14 +2,18 @@ package com.lerson.demomanager.impl;
 
 import com.lerson.demomanager.dao.EmployeeDAO;
 import com.lerson.demomanager.db.DB;
+import com.lerson.demomanager.db.exceptions.DBDateParseException;
 import com.lerson.demomanager.db.exceptions.DBException;
 import com.lerson.demomanager.entities.DBQuery;
 import com.lerson.demomanager.entities.Employee;
+import com.lerson.demomanager.entities.UpdateResult;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class EmployeeDAOJDBC implements EmployeeDAO {
@@ -82,8 +86,49 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
     }
 
     @Override
-    public Integer create(Employee employee) {
-        return null;
+    public UpdateResult create(Employee employee) {
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        UpdateResult updateResult = new UpdateResult();
+
+        try {
+            Connection conn = DB.getConnection();
+
+            String query = "INSERT INTO employee" +
+                    "(name, cpf, birthdate, email, isadmin, basesalary, username)" +
+                    "VALUES (?, ?, ?, ?, ?, ?, ?);";
+            st = conn.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
+            st.setString(1, employee.getName());
+            st.setString(2, employee.getCpf());
+            st.setDate(3, new java.sql.Date(
+                    new SimpleDateFormat("dd/MM/yyyy")
+                            .parse(new SimpleDateFormat("dd/MM/yyyy").format(employee.getBirthDate()))
+                            .getTime()
+            ));
+            st.setBoolean(4, employee.getAdmin());
+            st.setDouble(5, employee.getBaseSalary());
+            st.setString(6, employee.getUsername());
+
+            Integer rowsAffected = st.executeUpdate();
+            rs = st.getGeneratedKeys();
+
+            while (rs.next()) {
+                updateResult = new UpdateResult(rowsAffected, rs.getInt(1));
+            }
+        }
+        catch (SQLException e) {
+            throw new DBException(e.getMessage());
+        }
+        catch (ParseException e) {
+            throw new DBDateParseException(e.getMessage());
+        }
+        finally {
+            DB.closeStatement(st);
+            DB.closeResultSet(rs);
+            DB.closeConnection();
+        }
+
+        return updateResult;
     }
 
     @Override
