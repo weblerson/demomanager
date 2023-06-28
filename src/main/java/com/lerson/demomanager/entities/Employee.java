@@ -123,4 +123,10 @@ public class Employee {
 
         return updateResult;
     }
+
+    public Integer updateEmployee() {
+        Integer rowsAffected = this.employeeDao.update(this);
+
+        return rowsAffected;
+    }
 }
