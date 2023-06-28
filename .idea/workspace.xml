@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="created util class for sha256 criptography" />
+    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="created personalized RuntimeException &quot;DBDateParseException&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/impl/EmployeeDAOJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/impl/EmployeeDAOJDBC.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="login_view" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,22 +44,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/weblerson/.jdks/corretto-17.0.5/lib/src.zip",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;employeedao__impl&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/weblerson/.jdks/corretto-17.0.5/lib/src.zip&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -199,7 +202,143 @@
       <option name="project" value="LOCAL" />
       <updated>1687893535889</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="typed some immutable attributes of Employee and Job as final">
+      <option name="closed" value="true" />
+      <created>1687894536800</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1687894536800</updated>
+    </task>
+    <task id="LOCAL-00018" summary="workspace changes">
+      <option name="closed" value="true" />
+      <created>1687894545046</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1687894545046</updated>
+    </task>
+    <task id="LOCAL-00019" summary="resolved NullPointerException warning on SHA256 util class">
+      <option name="closed" value="true" />
+      <created>1687894616316</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1687894616316</updated>
+    </task>
+    <task id="LOCAL-00020" summary="created EmployeeDAO interface">
+      <option name="closed" value="true" />
+      <created>1687922329619</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1687922329619</updated>
+    </task>
+    <task id="LOCAL-00021" summary="created new constructor overload">
+      <option name="closed" value="true" />
+      <created>1687922351088</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1687922351088</updated>
+    </task>
+    <task id="LOCAL-00022" summary="created generic DBQuery class">
+      <option name="closed" value="true" />
+      <created>1687922368527</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1687922368527</updated>
+    </task>
+    <task id="LOCAL-00023" summary="implemented getById method">
+      <option name="closed" value="true" />
+      <created>1687923637934</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1687923637934</updated>
+    </task>
+    <task id="LOCAL-00024" summary="added closeStatement and closeResultSet static methods">
+      <option name="closed" value="true" />
+      <created>1687923654245</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1687923654245</updated>
+    </task>
+    <task id="LOCAL-00025" summary="corrected birthDate type of LocalDate to Date">
+      <option name="closed" value="true" />
+      <created>1687923676451</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1687923676451</updated>
+    </task>
+    <task id="LOCAL-00026" summary="removed constructor and added add method">
+      <option name="closed" value="true" />
+      <created>1687924064381</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1687924064381</updated>
+    </task>
+    <task id="LOCAL-00027" summary="updated exists() method">
+      <option name="closed" value="true" />
+      <created>1687924084388</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1687924084388</updated>
+    </task>
+    <task id="LOCAL-00028" summary="implemented findById() method of EmployeeDAO in EMployeeDAOJDBC class">
+      <option name="closed" value="true" />
+      <created>1687924140091</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1687924140091</updated>
+    </task>
+    <task id="LOCAL-00029" summary="created static method &quot;createEmployee&quot; on EmployeeDAOJDBC class for reuse">
+      <option name="closed" value="true" />
+      <created>1687924512143</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1687924512143</updated>
+    </task>
+    <task id="LOCAL-00030" summary="implemented &quot;create&quot; method on EmployeeDAOJDBC class">
+      <option name="closed" value="true" />
+      <created>1687926538826</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1687926538826</updated>
+    </task>
+    <task id="LOCAL-00031" summary="updated return type of &quot;create&quot; method to UpdateResult">
+      <option name="closed" value="true" />
+      <created>1687926558476</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1687926558476</updated>
+    </task>
+    <task id="LOCAL-00032" summary="created UpdateResult entity">
+      <option name="closed" value="true" />
+      <created>1687926568697</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1687926568697</updated>
+    </task>
+    <task id="LOCAL-00033" summary="created personalized RuntimeException &quot;DBDateParseException&quot;">
+      <option name="closed" value="true" />
+      <created>1687926600080</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1687926600080</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,14 +356,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first commit" />
-    <MESSAGE value="renamed hello-view.fxml to main-view.fxml" />
-    <MESSAGE value="renamed HelloAplication.java to Application.java" />
-    <MESSAGE value="moved Application.java to com.lerson.demomanager.application package" />
-    <MESSAGE value="renamed HelloController.java to MainViewController.java" />
-    <MESSAGE value="moved MainViewController to controllers package" />
-    <MESSAGE value="fixed identation" />
-    <MESSAGE value="created the login view design" />
     <MESSAGE value="made login-view the first view and set it not resizable" />
     <MESSAGE value="added the inputs' id's and function to submit button" />
     <MESSAGE value="ignored db.properties file" />
@@ -233,7 +364,24 @@
     <MESSAGE value="required java.sql lib" />
     <MESSAGE value="added postgresql's jdbc driver on maven's dependencies" />
     <MESSAGE value="created util class for sha256 criptography" />
-    <option name="LAST_COMMIT_MESSAGE" value="created util class for sha256 criptography" />
+    <MESSAGE value="typed some immutable attributes of Employee and Job as final" />
+    <MESSAGE value="workspace changes" />
+    <MESSAGE value="resolved NullPointerException warning on SHA256 util class" />
+    <MESSAGE value="created EmployeeDAO interface" />
+    <MESSAGE value="created new constructor overload" />
+    <MESSAGE value="created generic DBQuery class" />
+    <MESSAGE value="implemented getById method" />
+    <MESSAGE value="added closeStatement and closeResultSet static methods" />
+    <MESSAGE value="corrected birthDate type of LocalDate to Date" />
+    <MESSAGE value="removed constructor and added add method" />
+    <MESSAGE value="updated exists() method" />
+    <MESSAGE value="implemented findById() method of EmployeeDAO in EMployeeDAOJDBC class" />
+    <MESSAGE value="created static method &quot;createEmployee&quot; on EmployeeDAOJDBC class for reuse" />
+    <MESSAGE value="implemented &quot;create&quot; method on EmployeeDAOJDBC class" />
+    <MESSAGE value="updated return type of &quot;create&quot; method to UpdateResult" />
+    <MESSAGE value="created UpdateResult entity" />
+    <MESSAGE value="created personalized RuntimeException &quot;DBDateParseException&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="created personalized RuntimeException &quot;DBDateParseException&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
