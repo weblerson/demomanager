@@ -8,9 +8,9 @@ import java.util.Date;
 public class Employee {
 
     private Integer id;
-    private final String name;
-    private final String cpf;
-    private final Date birthDate;
+    private String name;
+    private String cpf;
+    private Date birthDate;
     private String email;
     private Boolean isAdmin;
     private Double baseSalary;
@@ -26,6 +26,10 @@ public class Employee {
         this.isAdmin = isAdmin;
         this.baseSalary = baseSalary;
         this.username = username;
+    }
+
+    public Employee() {
+
     }
 
     public Employee(Integer id, String name, String cpf, Date birthDate,
