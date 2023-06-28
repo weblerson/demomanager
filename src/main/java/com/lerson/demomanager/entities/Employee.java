@@ -129,4 +129,10 @@ public class Employee {
 
         return rowsAffected;
     }
+
+    public Integer delete() {
+        Integer rowsAffected = this.employeeDao.delete(this.id);
+
+        return rowsAffected;
+    }
 }
