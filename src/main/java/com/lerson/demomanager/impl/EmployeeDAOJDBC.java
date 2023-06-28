@@ -56,7 +56,42 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
 
     @Override
     public DBQuery<Employee> findById(Integer id) {
-        return null;
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        DBQuery dbQuery =  new DBQuery();
+
+        try {
+            Connection conn = DB.getConnection();
+
+            String query = "SELECT * FROM employee" +
+                    "WHERE employee.id = ?;";
+            st = conn.prepareStatement(query);
+            st.setInt(1, id);
+
+            rs = st.executeQuery();
+            while (rs.next()) {
+                String name = rs.getString("name");
+                String cpf = rs.getString("cpf");
+                Date birthDate = rs.getDate("birthDate");
+                String email = rs.getString("email");
+                Boolean isAdmin = rs.getBoolean("isadmin");
+                Double baseSalary = rs.getDouble("basesalary");
+                String username = rs.getString("username");
+
+                Employee employee = new Employee(id, name, cpf, birthDate, email, isAdmin, baseSalary, username);
+                dbQuery.add(employee);
+            }
+        }
+        catch (SQLException e) {
+            throw new DBException(e.getMessage());
+        }
+        finally {
+            DB.closeStatement(st);
+            DB.closeResultSet(rs);
+            DB.closeConnection();
+        }
+
+        return dbQuery;
     }
 
     @Override
