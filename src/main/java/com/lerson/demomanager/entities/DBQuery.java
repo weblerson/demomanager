@@ -11,11 +11,7 @@ public class DBQuery <T> {
     }
 
     public Boolean exists() {
-        if (this.query.size() > 0) {
-            return true;
-        }
-
-        return false;
+        return this.query.size() > 0;
     }
 
     public void add(T entity) {
