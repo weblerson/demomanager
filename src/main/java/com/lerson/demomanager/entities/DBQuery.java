@@ -6,10 +6,6 @@ public class DBQuery <T> {
 
     private List<T> query;
 
-    public DBQuery(List<T> query) {
-        this.query = query;
-    }
-
     public List<T> all() {
         return this.query;
     }
@@ -20,5 +16,9 @@ public class DBQuery <T> {
         }
 
         return false;
+    }
+
+    public void add(T entity) {
+        this.query.add(entity);
     }
 }
