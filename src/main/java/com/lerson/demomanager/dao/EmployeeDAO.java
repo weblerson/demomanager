@@ -2,6 +2,7 @@ package com.lerson.demomanager.dao;
 
 import com.lerson.demomanager.entities.DBQuery;
 import com.lerson.demomanager.entities.Employee;
+import com.lerson.demomanager.entities.UpdateResult;
 
 public interface EmployeeDAO {
 
@@ -9,7 +10,7 @@ public interface EmployeeDAO {
 
     DBQuery<Employee> findById(Integer id);
 
-    Integer create(Employee employee);
+    UpdateResult create(Employee employee);
 
     Integer update(Employee employee);
 
