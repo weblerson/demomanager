@@ -117,4 +117,10 @@ public class Employee {
 
         return employees;
     }
+
+    public UpdateResult createEmployee() {
+        UpdateResult updateResult = this.employeeDao.create(this);
+
+        return updateResult;
+    }
 }
