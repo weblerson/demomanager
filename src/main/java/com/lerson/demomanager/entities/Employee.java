@@ -124,6 +124,12 @@ public class Employee {
         return employees;
     }
 
+    public DBQuery<Employee> find(String username, String password) {
+        DBQuery<Employee> employees = this.employeeDao.findByUsernameAndPassword(username, password);
+
+        return employees;
+    }
+
     public UpdateResult createEmployee() {
         UpdateResult updateResult = this.employeeDao.create(this);
 
