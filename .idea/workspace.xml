@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="workspace changes">
+    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="login dao">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/application/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/DBQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/DBQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/impl/EmployeeDAOJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/impl/EmployeeDAOJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/dao/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/dao/EmployeeDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -51,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "employee__dao__findByUsername__method",
     "last_opened_file_path": "/home/weblerson/.jdks/corretto-17.0.5/lib/src.zip",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -404,7 +403,39 @@
       <option name="project" value="LOCAL" />
       <updated>1687982607653</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="correction of type of List of query property">
+      <option name="closed" value="true" />
+      <created>1688233822842</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1688233822842</updated>
+    </task>
+    <task id="LOCAL-00043" summary="correction of SQL code on EmployeeDAOJDBC class">
+      <option name="closed" value="true" />
+      <created>1688233851714</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1688233851714</updated>
+    </task>
+    <task id="LOCAL-00044" summary="workspace changes">
+      <option name="closed" value="true" />
+      <created>1688233866718</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1688233866718</updated>
+    </task>
+    <task id="LOCAL-00045" summary="login dao">
+      <option name="closed" value="true" />
+      <created>1688234271071</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1688234271071</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,9 +453,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created util class for sha256 criptography" />
-    <MESSAGE value="typed some immutable attributes of Employee and Job as final" />
-    <MESSAGE value="resolved NullPointerException warning on SHA256 util class" />
     <MESSAGE value="created EmployeeDAO interface" />
     <MESSAGE value="created new constructor overload" />
     <MESSAGE value="created generic DBQuery class" />
@@ -446,8 +474,11 @@
     <MESSAGE value="created &quot;updateEmployee&quot; method on Employee entity to implement &quot;update&quot;" />
     <MESSAGE value="created &quot;delete&quot; method on Employee entity to implement &quot;delete&quot;" />
     <MESSAGE value="renamed &quot;updateEmployee&quot; method to &quot;update&quot;" />
+    <MESSAGE value="correction of type of List of query property" />
+    <MESSAGE value="correction of SQL code on EmployeeDAOJDBC class" />
     <MESSAGE value="workspace changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace changes" />
+    <MESSAGE value="login dao" />
+    <option name="LAST_COMMIT_MESSAGE" value="login dao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
