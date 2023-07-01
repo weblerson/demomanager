@@ -1,10 +1,11 @@
 package com.lerson.demomanager.entities;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class DBQuery <T> {
 
-    private List<T> query;
+    private List<T> query = new ArrayList<>();
 
     public List<T> all() {
         return this.query;
