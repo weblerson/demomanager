@@ -118,6 +118,12 @@ public class Employee {
         return employees;
     }
 
+    public DBQuery<Employee> find(String username) {
+        DBQuery<Employee> employees = this.employeeDao.findByUsername(username);
+
+        return employees;
+    }
+
     public UpdateResult createEmployee() {
         UpdateResult updateResult = this.employeeDao.create(this);
 
