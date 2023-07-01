@@ -28,7 +28,7 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
             Connection conn = DB.getConnection();
 
             String query = "SELECT * FROM employee " +
-                    "WHERE employee.id = ?;";
+                    "WHERE id = ?;";
             st = conn.prepareStatement(query);
             st.setInt(1, id);
             rs = st.executeQuery();
@@ -36,14 +36,13 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
             while (rs.next()) {
                 employee = createEmployee(rs);
             }
-        }
-        catch (SQLException e) {
-            throw new DBException(e.getMessage());
-        }
-        finally {
+
             DB.closeStatement(st);
             DB.closeResultSet(rs);
             DB.closeConnection();
+        }
+        catch (SQLException e) {
+            throw new DBException(e.getMessage());
         }
 
         if (employee == null) {
@@ -63,7 +62,7 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
             Connection conn = DB.getConnection();
 
             String query = "SELECT * FROM employee " +
-                    "WHERE employee.id = ?;";
+                    "WHERE id = ?;";
             st = conn.prepareStatement(query);
             st.setInt(1, id);
 
@@ -72,14 +71,13 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
                 Employee employee = createEmployee(rs);
                 dbQuery.add(employee);
             }
-        }
-        catch (SQLException e) {
-            throw new DBException(e.getMessage());
-        }
-        finally {
+
             DB.closeStatement(st);
             DB.closeResultSet(rs);
             DB.closeConnection();
+        }
+        catch (SQLException e) {
+            throw new DBException(e.getMessage());
         }
 
         return dbQuery;
@@ -105,9 +103,10 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
                             .parse(new SimpleDateFormat("dd/MM/yyyy").format(employee.getBirthDate()))
                             .getTime()
             ));
-            st.setBoolean(4, employee.getAdmin());
-            st.setDouble(5, employee.getBaseSalary());
-            st.setString(6, employee.getUsername());
+            st.setString(4, employee.getEmail());
+            st.setBoolean(5, employee.getAdmin());
+            st.setDouble(6, employee.getBaseSalary());
+            st.setString(7, employee.getUsername());
 
             Integer rowsAffected = st.executeUpdate();
             rs = st.getGeneratedKeys();
@@ -115,17 +114,16 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
             while (rs.next()) {
                 updateResult = new UpdateResult(rowsAffected, rs.getInt(1));
             }
+
+            DB.closeStatement(st);
+            DB.closeResultSet(rs);
+            DB.closeConnection();
         }
         catch (SQLException e) {
             throw new DBException(e.getMessage());
         }
         catch (ParseException e) {
             throw new DBDateParseException(e.getMessage());
-        }
-        finally {
-            DB.closeStatement(st);
-            DB.closeResultSet(rs);
-            DB.closeConnection();
         }
 
         return updateResult;
@@ -148,13 +146,12 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
             st.setString(4, employee.getUsername());
 
             rowsAffected = st.executeUpdate();
+
+            DB.closeStatement(st);
+            DB.closeConnection();
         }
         catch (SQLException e) {
             throw new DBException(e.getMessage());
-        }
-        finally {
-            DB.closeStatement(st);
-            DB.closeConnection();
         }
 
         return rowsAffected;
@@ -168,19 +165,18 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
         try {
             Connection conn = DB.getConnection();
 
-            String query = "DELETE employee " +
-                            "WHERE employee.id = ?;";
+            String query = "DELETE FROM employee " +
+                            "WHERE id = ?;";
             st = conn.prepareStatement(query);
             st.setInt(1, id);
 
             rowsAffected = st.executeUpdate();
+
+            DB.closeStatement(st);
+            DB.closeConnection();
         }
         catch (SQLException e) {
             throw new DBException(e.getMessage());
-        }
-        finally {
-            DB.closeStatement(st);
-            DB.closeConnection();
         }
 
         return rowsAffected;
