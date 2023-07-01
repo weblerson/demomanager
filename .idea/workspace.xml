@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="renamed &quot;updateEmployee&quot; method to &quot;update&quot;">
+    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="workspace changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/application/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/DBQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/DBQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/impl/EmployeeDAOJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/impl/EmployeeDAOJDBC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -393,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1687981791561</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="workspace changes">
+      <option name="closed" value="true" />
+      <created>1687982607653</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1687982607653</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +424,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created util class for sha256 criptography" />
     <MESSAGE value="typed some immutable attributes of Employee and Job as final" />
-    <MESSAGE value="workspace changes" />
     <MESSAGE value="resolved NullPointerException warning on SHA256 util class" />
     <MESSAGE value="created EmployeeDAO interface" />
     <MESSAGE value="created new constructor overload" />
@@ -436,7 +446,8 @@
     <MESSAGE value="created &quot;updateEmployee&quot; method on Employee entity to implement &quot;update&quot;" />
     <MESSAGE value="created &quot;delete&quot; method on Employee entity to implement &quot;delete&quot;" />
     <MESSAGE value="renamed &quot;updateEmployee&quot; method to &quot;update&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="renamed &quot;updateEmployee&quot; method to &quot;update&quot;" />
+    <MESSAGE value="workspace changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
