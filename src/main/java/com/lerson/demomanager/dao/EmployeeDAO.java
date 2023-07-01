@@ -12,6 +12,8 @@ public interface EmployeeDAO {
 
     DBQuery<Employee> findByUsername(String username);
 
+    DBQuery<Employee> findByUsernameAndPassword(String username, String password);
+
     UpdateResult create(Employee employee);
 
     Integer update(Employee employee);
