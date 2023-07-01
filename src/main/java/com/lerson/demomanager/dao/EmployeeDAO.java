@@ -10,6 +10,8 @@ public interface EmployeeDAO {
 
     DBQuery<Employee> findById(Integer id);
 
+    DBQuery<Employee> findByUsername(String username);
+
     UpdateResult create(Employee employee);
 
     Integer update(Employee employee);
