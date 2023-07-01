@@ -83,6 +83,7 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
         return dbQuery;
     }
 
+    @Override
     public DBQuery<Employee> findByUsername(String username) {
         PreparedStatement st = null;
         ResultSet rs = null;
@@ -104,6 +105,38 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
 
             DB.closeResultSet(rs);
             DB.closeStatement(st);
+            DB.closeConnection();
+        }
+        catch (SQLException e) {
+            throw new DBException(e.getMessage());
+        }
+
+        return dbQuery;
+    }
+
+    @Override
+    public DBQuery<Employee> findByUsernameAndPassword(String username, String password) {
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        DBQuery<Employee> dbQuery = new DBQuery<>();
+
+        try {
+            Connection conn = DB.getConnection();
+
+            String query = "SELECT * FROM employee " +
+                            "WHERE username = ? AND password = ?;";
+            st = conn.prepareStatement(query);
+            st.setString(1, username);
+            st.setString(2, password);
+
+            rs = st.executeQuery();
+            while (rs.next()) {
+                Employee employee = createEmployee(rs);
+                dbQuery.add(employee);
+            }
+
+            DB.closeStatement(st);
+            DB.closeResultSet(rs);
             DB.closeConnection();
         }
         catch (SQLException e) {
