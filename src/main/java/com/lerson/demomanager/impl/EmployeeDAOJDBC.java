@@ -92,7 +92,7 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
         try {
             Connection conn = DB.getConnection();
 
-            String query = "SELECT * FROM employee" +
+            String query = "SELECT * FROM employee " +
                             "WHERE username = ?;";
             st = conn.prepareStatement(query);
             st.setString(1, username);
