@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="created Auth interface who implements &quot;authenticate&quot; method">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/auth/JDBCAuth.java" afterDir="false" />
+    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="turned 'raiseMainView' method non static">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/exceptions/SceneException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/application/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/LoginViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,26 +45,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "jdbc__auth",
-    "last_opened_file_path": "/home/weblerson/.jdks/corretto-17.0.5/lib/src.zip",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;onSubmit__login__controller&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/weblerson/.jdks/corretto-17.0.5/lib/src.zip&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="com.lerson.demomanager.exceptions in DemoManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DemoManager" />
+      <option name="PACKAGE_NAME" value="com.lerson.demomanager.exceptions" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.com.lerson.demomanager.exceptions in DemoManager" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -443,7 +458,31 @@
       <option name="project" value="LOCAL" />
       <updated>1688238757752</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="corrected SQL query string">
+      <option name="closed" value="true" />
+      <created>1688592359324</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1688592359324</updated>
+    </task>
+    <task id="LOCAL-00048" summary="created 'submit' action on LoginViewController class">
+      <option name="closed" value="true" />
+      <created>1688594394610</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1688594394610</updated>
+    </task>
+    <task id="LOCAL-00049" summary="turned 'raiseMainView' method non static">
+      <option name="closed" value="true" />
+      <created>1688594906684</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1688594906684</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,9 +500,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created new constructor overload" />
-    <MESSAGE value="created generic DBQuery class" />
-    <MESSAGE value="implemented getById method" />
     <MESSAGE value="added closeStatement and closeResultSet static methods" />
     <MESSAGE value="corrected birthDate type of LocalDate to Date" />
     <MESSAGE value="removed constructor and added add method" />
@@ -486,7 +522,10 @@
     <MESSAGE value="workspace changes" />
     <MESSAGE value="login dao" />
     <MESSAGE value="created Auth interface who implements &quot;authenticate&quot; method" />
-    <option name="LAST_COMMIT_MESSAGE" value="created Auth interface who implements &quot;authenticate&quot; method" />
+    <MESSAGE value="corrected SQL query string" />
+    <MESSAGE value="created 'submit' action on LoginViewController class" />
+    <MESSAGE value="turned 'raiseMainView' method non static" />
+    <option name="LAST_COMMIT_MESSAGE" value="turned 'raiseMainView' method non static" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
