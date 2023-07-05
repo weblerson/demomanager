@@ -1,7 +1,11 @@
 package com.lerson.demomanager.controllers;
 
+import com.lerson.demomanager.entities.DBQuery;
+import com.lerson.demomanager.entities.Employee;
 import com.lerson.demomanager.utils.SHA256;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -17,5 +21,36 @@ public class LoginViewController {
     protected void submit() {
         String username = usernameField.getText();
         String hashPassword = SHA256.parse(passwordField.getText());
+
+        DBQuery<Employee> employee = new Employee().find(username);
+        if (employee.exists()) {
+            employee = new Employee().find(username, hashPassword);
+
+            if (employee.exists()) {
+                raiseMainView();
+                this.clearFields();
+
+                return;
+            }
+        }
+
+        Alert alert = new Alert(
+                Alert.AlertType.WARNING,
+                "Usuário e/ou senha incorretos!",
+                ButtonType.OK
+        );
+
+        alert.show();
+
+        this.clearFields();
+    }
+
+    private void clearFields() {
+        this.usernameField.setText("");
+        this.passwordField.setText("");
+    }
+
+    private static void raiseMainView() {
+
     }
 }
