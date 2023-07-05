@@ -2,8 +2,11 @@ package com.lerson.demomanager.controllers;
 
 import com.lerson.demomanager.entities.DBQuery;
 import com.lerson.demomanager.entities.Employee;
+import com.lerson.demomanager.utils.FXMLPath;
 import com.lerson.demomanager.utils.SHA256;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.PasswordField;
@@ -28,7 +31,7 @@ public class LoginViewController {
 
             if (employee.exists()) {
                 raiseMainView();
-                this.clearFields();
+                clearFields();
 
                 return;
             }
@@ -42,7 +45,7 @@ public class LoginViewController {
 
         alert.show();
 
-        this.clearFields();
+        clearFields();
     }
 
     private void clearFields() {
@@ -50,7 +53,7 @@ public class LoginViewController {
         this.passwordField.setText("");
     }
 
-    private static void raiseMainView() {
+    private void raiseMainView() {
 
     }
 }
