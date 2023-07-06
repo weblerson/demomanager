@@ -29,6 +29,18 @@ public class LoginViewController {
         String username = usernameField.getText();
         String hashPassword = SHA256.parse(passwordField.getText());
 
+        if (username.length() == 0 || hashPassword.length() == 0) {
+            Alert alert = new Alert(
+                    Alert.AlertType.WARNING,
+                    "Preencha todos os campos!",
+                    ButtonType.OK
+            );
+
+            alert.show();
+
+            return;
+        }
+
         DBQuery<Employee> employee = new Employee().find(username);
         if (employee.exists()) {
             employee = new Employee().find(username, hashPassword);
