@@ -34,7 +34,7 @@ public class Employee {
     }
 
     public Employee(Integer id, String name, String cpf, Date birthDate,
-                    String email, Boolean isAdmin, Double baseSalary, String username) {
+                    String email, Boolean isAdmin, Double baseSalary, String username, String password) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
@@ -43,6 +43,7 @@ public class Employee {
         this.isAdmin = isAdmin;
         this.baseSalary = baseSalary;
         this.username = username;
+        this.password = password;
     }
 
     public Integer getId() {
