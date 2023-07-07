@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="updated createEmployee method on EmployeeDAOJDBC to return password">
+    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="created confirmPasswordField constraint on PasswordCreationViewController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/LoginViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/PasswordCreationViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/PasswordCreationViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/DBQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/DBQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/Employee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,22 +44,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;password__creation__view&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/weblerson/.jdks/corretto-17.0.5/lib/src.zip&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "fields__constraints",
+    "last_opened_file_path": "/home/weblerson/.jdks/corretto-17.0.5/lib/src.zip",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -97,38 +94,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687745071194</updated>
-    </task>
-    <task id="LOCAL-00013" summary="created personalized exceptions to db package">
-      <option name="closed" value="true" />
-      <created>1687893466301</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1687893466301</updated>
-    </task>
-    <task id="LOCAL-00014" summary="required java.sql lib">
-      <option name="closed" value="true" />
-      <created>1687893487959</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1687893487959</updated>
-    </task>
-    <task id="LOCAL-00015" summary="added postgresql's jdbc driver on maven's dependencies">
-      <option name="closed" value="true" />
-      <created>1687893517419</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1687893517419</updated>
-    </task>
-    <task id="LOCAL-00016" summary="created util class for sha256 criptography">
-      <option name="closed" value="true" />
-      <created>1687893535889</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1687893535889</updated>
     </task>
     <task id="LOCAL-00017" summary="typed some immutable attributes of Employee and Job as final">
       <option name="closed" value="true" />
@@ -490,7 +455,39 @@
       <option name="project" value="LOCAL" />
       <updated>1688698815982</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="created usernameField constraint on LoginViewController">
+      <option name="closed" value="true" />
+      <created>1688759044035</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1688759044035</updated>
+    </task>
+    <task id="LOCAL-00063" summary="created passwordField constraint on LoginViewController">
+      <option name="closed" value="true" />
+      <created>1688759399463</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1688759399463</updated>
+    </task>
+    <task id="LOCAL-00064" summary="created passwordField constraint on PasswordCreationViewController">
+      <option name="closed" value="true" />
+      <created>1688759507089</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1688759507089</updated>
+    </task>
+    <task id="LOCAL-00065" summary="created confirmPasswordField constraint on PasswordCreationViewController">
+      <option name="closed" value="true" />
+      <created>1688759646389</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1688759646389</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,10 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created empty constructor on Employee entity" />
-    <MESSAGE value="created &quot;find&quot; method on Employee entity to implement &quot;findById&quot;" />
-    <MESSAGE value="created &quot;createEmployee&quot; method on Employee entity to implement &quot;create&quot;" />
-    <MESSAGE value="created &quot;updateEmployee&quot; method on Employee entity to implement &quot;update&quot;" />
     <MESSAGE value="created &quot;delete&quot; method on Employee entity to implement &quot;delete&quot;" />
     <MESSAGE value="renamed &quot;updateEmployee&quot; method to &quot;update&quot;" />
     <MESSAGE value="correction of type of List of query property" />
@@ -533,7 +526,11 @@
     <MESSAGE value="created EmployeeSession class" />
     <MESSAGE value="updated password creation fmxl view" />
     <MESSAGE value="updated createEmployee method on EmployeeDAOJDBC to return password" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated createEmployee method on EmployeeDAOJDBC to return password" />
+    <MESSAGE value="created usernameField constraint on LoginViewController" />
+    <MESSAGE value="created passwordField constraint on LoginViewController" />
+    <MESSAGE value="created passwordField constraint on PasswordCreationViewController" />
+    <MESSAGE value="created confirmPasswordField constraint on PasswordCreationViewController" />
+    <option name="LAST_COMMIT_MESSAGE" value="created confirmPasswordField constraint on PasswordCreationViewController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -548,7 +545,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/PasswordCreationViewController.java</url>
-          <line>39</line>
+          <line>63</line>
           <properties class="com.lerson.demomanager.controllers.PasswordCreationViewController" method="seePasswordAction">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
