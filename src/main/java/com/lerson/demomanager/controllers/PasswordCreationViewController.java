@@ -15,6 +15,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PasswordCreationViewController {
 
@@ -35,29 +37,17 @@ public class PasswordCreationViewController {
         this.passwordField.setVisible(false);
         this.confirmPasswordField.setVisible(false);
 
-        this.passwordField.textProperty().addListener((obs, oldValue, newValue) -> {
-            if (newValue != null && newValue.matches(".*\\s+.*")) {
-                this.passwordField.setText(oldValue);
-            }
-        });
+        List<TextField> inputs = new ArrayList<>();
+        inputs.add(this.passwordField);
+        inputs.add(this.passwordPasswordField);
+        inputs.add(this.confirmPasswordField);
+        inputs.add(this.confirmPasswordPasswordField);
 
-        this.passwordPasswordField.textProperty().addListener((obs, oldValue, newValue) -> {
+        inputs.forEach(input -> input.textProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue != null && newValue.matches(".*\\s+.*")) {
-                this.passwordPasswordField.setText(oldValue);
+                input.setText(oldValue);
             }
-        });
-
-        this.confirmPasswordField.textProperty().addListener((obs, oldValue, newValue) -> {
-            if (newValue != null && newValue.matches(".*\\s+.*")) {
-                this.confirmPasswordField.setText(oldValue);
-            }
-        });
-
-        this.confirmPasswordPasswordField.textProperty().addListener((obs, oldValue, newValue) -> {
-            if (newValue != null && newValue.matches(".*\\s+.*")) {
-                this.confirmPasswordPasswordField.setText(oldValue);
-            }
-        });
+        }));
     }
 
     @FXML
