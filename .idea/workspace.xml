@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="turned 'raiseMainView' method non static">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/exceptions/SceneException.java" afterDir="false" />
+    <list default="true" id="fb6492bd-57df-4aa6-aec5-c4a2e5a54989" name="Changes" comment="updated createEmployee method on EmployeeDAOJDBC to return password">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/LoginViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/PasswordCreationViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/PasswordCreationViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/DBQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/DBQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lerson/demomanager/entities/Employee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -50,7 +52,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;onSubmit__login__controller&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;password__creation__view&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/weblerson/.jdks/corretto-17.0.5/lib/src.zip&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,6 +69,12 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lerson.demomanager.application.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="com.lerson.demomanager.exceptions in DemoManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DemoManager" />
       <option name="PACKAGE_NAME" value="com.lerson.demomanager.exceptions" />
@@ -89,102 +97,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687745071194</updated>
-    </task>
-    <task id="LOCAL-00001" summary="first commit">
-      <option name="closed" value="true" />
-      <created>1687745488180</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1687745488180</updated>
-    </task>
-    <task id="LOCAL-00002" summary="renamed hello-view.fxml to main-view.fxml">
-      <option name="closed" value="true" />
-      <created>1687797978347</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1687797978347</updated>
-    </task>
-    <task id="LOCAL-00003" summary="renamed HelloAplication.java to Application.java">
-      <option name="closed" value="true" />
-      <created>1687798046495</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1687798046495</updated>
-    </task>
-    <task id="LOCAL-00004" summary="moved Application.java to com.lerson.demomanager.application package">
-      <option name="closed" value="true" />
-      <created>1687798123275</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1687798123275</updated>
-    </task>
-    <task id="LOCAL-00005" summary="renamed HelloController.java to MainViewController.java">
-      <option name="closed" value="true" />
-      <created>1687798200001</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1687798200001</updated>
-    </task>
-    <task id="LOCAL-00006" summary="moved MainViewController to controllers package">
-      <option name="closed" value="true" />
-      <created>1687798227274</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1687798227274</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fixed identation">
-      <option name="closed" value="true" />
-      <created>1687806406323</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1687806406323</updated>
-    </task>
-    <task id="LOCAL-00008" summary="created the login view design">
-      <option name="closed" value="true" />
-      <created>1687806418032</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1687806418032</updated>
-    </task>
-    <task id="LOCAL-00009" summary="made login-view the first view and set it not resizable">
-      <option name="closed" value="true" />
-      <created>1687806459926</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1687806459926</updated>
-    </task>
-    <task id="LOCAL-00010" summary="added the inputs' id's and function to submit button">
-      <option name="closed" value="true" />
-      <created>1687889746945</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1687889746945</updated>
-    </task>
-    <task id="LOCAL-00011" summary="ignored db.properties file">
-      <option name="closed" value="true" />
-      <created>1687893427600</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1687893427600</updated>
-    </task>
-    <task id="LOCAL-00012" summary="created class for DB Connection">
-      <option name="closed" value="true" />
-      <created>1687893443369</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1687893443370</updated>
     </task>
     <task id="LOCAL-00013" summary="created personalized exceptions to db package">
       <option name="closed" value="true" />
@@ -482,7 +394,103 @@
       <option name="project" value="LOCAL" />
       <updated>1688594906684</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="created password creation view fxml file">
+      <option name="closed" value="true" />
+      <created>1688683224334</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1688683224334</updated>
+    </task>
+    <task id="LOCAL-00051" summary="created password creation view controller class">
+      <option name="closed" value="true" />
+      <created>1688683238735</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1688683238736</updated>
+    </task>
+    <task id="LOCAL-00052" summary="implemented blank inputs check on submit action">
+      <option name="closed" value="true" />
+      <created>1688683272454</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1688683272454</updated>
+    </task>
+    <task id="LOCAL-00053" summary="edited password creation view">
+      <option name="closed" value="true" />
+      <created>1688683683097</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1688683683097</updated>
+    </task>
+    <task id="LOCAL-00054" summary="created updatePassword method on EmployeeDAO">
+      <option name="closed" value="true" />
+      <created>1688697823087</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1688697823088</updated>
+    </task>
+    <task id="LOCAL-00055" summary="implemented updatePassword method on EmployeeDAOJDBC">
+      <option name="closed" value="true" />
+      <created>1688698618095</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1688698618095</updated>
+    </task>
+    <task id="LOCAL-00056" summary="updated argument type on updatePassword method">
+      <option name="closed" value="true" />
+      <created>1688698633882</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1688698633882</updated>
+    </task>
+    <task id="LOCAL-00057" summary="implemented updatePassword method on Employee  entity">
+      <option name="closed" value="true" />
+      <created>1688698653263</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1688698653263</updated>
+    </task>
+    <task id="LOCAL-00058" summary="created EmployeeSession class">
+      <option name="closed" value="true" />
+      <created>1688698664049</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1688698664049</updated>
+    </task>
+    <task id="LOCAL-00059" summary="updated password creation fmxl view">
+      <option name="closed" value="true" />
+      <created>1688698680983</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1688698680983</updated>
+    </task>
+    <task id="LOCAL-00060" summary="updated createEmployee method on EmployeeDAOJDBC to return password">
+      <option name="closed" value="true" />
+      <created>1688698809261</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1688698809261</updated>
+    </task>
+    <task id="LOCAL-00061" summary="updated createEmployee method on EmployeeDAOJDBC to return password">
+      <option name="closed" value="true" />
+      <created>1688698815982</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1688698815982</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,17 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added closeStatement and closeResultSet static methods" />
-    <MESSAGE value="corrected birthDate type of LocalDate to Date" />
-    <MESSAGE value="removed constructor and added add method" />
-    <MESSAGE value="updated exists() method" />
-    <MESSAGE value="implemented findById() method of EmployeeDAO in EMployeeDAOJDBC class" />
-    <MESSAGE value="created static method &quot;createEmployee&quot; on EmployeeDAOJDBC class for reuse" />
-    <MESSAGE value="implemented &quot;create&quot; method on EmployeeDAOJDBC class" />
-    <MESSAGE value="updated return type of &quot;create&quot; method to UpdateResult" />
-    <MESSAGE value="created UpdateResult entity" />
-    <MESSAGE value="created personalized RuntimeException &quot;DBDateParseException&quot;" />
-    <MESSAGE value="created &quot;get&quot; method on Employee entity to implement &quot;getById&quot;" />
     <MESSAGE value="created empty constructor on Employee entity" />
     <MESSAGE value="created &quot;find&quot; method on Employee entity to implement &quot;findById&quot;" />
     <MESSAGE value="created &quot;createEmployee&quot; method on Employee entity to implement &quot;create&quot;" />
@@ -525,7 +522,18 @@
     <MESSAGE value="corrected SQL query string" />
     <MESSAGE value="created 'submit' action on LoginViewController class" />
     <MESSAGE value="turned 'raiseMainView' method non static" />
-    <option name="LAST_COMMIT_MESSAGE" value="turned 'raiseMainView' method non static" />
+    <MESSAGE value="created password creation view fxml file" />
+    <MESSAGE value="created password creation view controller class" />
+    <MESSAGE value="implemented blank inputs check on submit action" />
+    <MESSAGE value="edited password creation view" />
+    <MESSAGE value="created updatePassword method on EmployeeDAO" />
+    <MESSAGE value="implemented updatePassword method on EmployeeDAOJDBC" />
+    <MESSAGE value="updated argument type on updatePassword method" />
+    <MESSAGE value="implemented updatePassword method on Employee  entity" />
+    <MESSAGE value="created EmployeeSession class" />
+    <MESSAGE value="updated password creation fmxl view" />
+    <MESSAGE value="updated createEmployee method on EmployeeDAOJDBC to return password" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated createEmployee method on EmployeeDAOJDBC to return password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -538,6 +546,15 @@
           <properties class="java.lang.RuntimeException" package="java.lang" />
           <option name="timeStamp" value="2" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lerson/demomanager/controllers/PasswordCreationViewController.java</url>
+          <line>39</line>
+          <properties class="com.lerson.demomanager.controllers.PasswordCreationViewController" method="seePasswordAction">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
