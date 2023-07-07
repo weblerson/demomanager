@@ -3,6 +3,7 @@ package com.lerson.demomanager.controllers;
 import com.lerson.demomanager.entities.DBQuery;
 import com.lerson.demomanager.entities.Employee;
 import com.lerson.demomanager.exceptions.SceneException;
+import com.lerson.demomanager.session.EmployeeSession;
 import com.lerson.demomanager.utils.FXMLPath;
 import com.lerson.demomanager.utils.SHA256;
 import javafx.fxml.FXML;
@@ -43,6 +44,15 @@ public class LoginViewController {
 
         DBQuery<Employee> employee = new Employee().find(username);
         if (employee.exists()) {
+            EmployeeSession.instance.setId(employee.first().getId());
+
+            if (employee.first().getPassword().length() == 0) {
+                raisePasswordCreationView();
+                clearFields();
+
+                return;
+            }
+
             employee = new Employee().find(username, hashPassword);
 
             if (employee.exists()) {
@@ -71,7 +81,7 @@ public class LoginViewController {
 
     private void raiseMainView() {
         FXMLLoader root = new FXMLLoader(getClass().getResource(FXMLPath.createFXMLPath("main-view.fxml")));
-        Stage window = (Stage) this.usernameField.getScene().getWindow();
+        Stage window = this.getWindow();
 
         try {
             Scene scene = new Scene(root.load());
@@ -82,5 +92,29 @@ public class LoginViewController {
         catch (IOException e) {
             throw new SceneException(e.getMessage());
         }
+    }
+
+    private void raisePasswordCreationView() {
+
+        Employee employee = new Employee().get(EmployeeSession.instance.getId());
+
+        FXMLLoader root = new FXMLLoader(getClass().getResource(
+                FXMLPath.createFXMLPath("password-creation-view.fxml")
+        ));
+        Stage window = this.getWindow();
+
+        try {
+            Scene scene = new Scene(root.load());
+            window.setTitle(String.format("Olá, %s!", employee.getName()));
+            window.setResizable(false);
+            window.setScene(scene);
+        }
+        catch (IOException e) {
+            throw new SceneException(e.getMessage());
+        }
+    }
+
+    private Stage getWindow() {
+        return (Stage) this.usernameField.getScene().getWindow();
     }
 }
