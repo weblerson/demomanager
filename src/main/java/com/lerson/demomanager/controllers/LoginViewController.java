@@ -6,7 +6,6 @@ import com.lerson.demomanager.exceptions.SceneException;
 import com.lerson.demomanager.session.EmployeeSession;
 import com.lerson.demomanager.utils.FXMLPath;
 import com.lerson.demomanager.utils.SHA256;
-import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
