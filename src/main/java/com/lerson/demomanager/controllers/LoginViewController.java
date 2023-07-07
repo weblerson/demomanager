@@ -6,6 +6,7 @@ import com.lerson.demomanager.exceptions.SceneException;
 import com.lerson.demomanager.session.EmployeeSession;
 import com.lerson.demomanager.utils.FXMLPath;
 import com.lerson.demomanager.utils.SHA256;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,6 +14,8 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LoginViewController {
 
@@ -24,17 +27,16 @@ public class LoginViewController {
 
     @FXML
     protected void initialize() {
-        this.usernameField.textProperty().addListener((obs, oldValue, newValue) -> {
-            if (newValue != null && newValue.matches(".*\\s+.*")) {
-                this.usernameField.setText(oldValue);
-            }
-        });
 
-        this.passwordField.textProperty().addListener((obs, oldValue, newValue) -> {
+        List<TextField> inputs = new ArrayList<>();
+        inputs.add(this.usernameField);
+        inputs.add(this.passwordField);
+
+        inputs.forEach(input -> input.textProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue != null && newValue.matches(".*\\s+.*")) {
-                this.passwordField.setText(oldValue);
+                input.setText(oldValue);
             }
-        });
+        }));
     }
 
     @FXML
