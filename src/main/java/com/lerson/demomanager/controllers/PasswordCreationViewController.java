@@ -34,6 +34,18 @@ public class PasswordCreationViewController {
     protected void initialize() {
         this.passwordField.setVisible(false);
         this.confirmPasswordField.setVisible(false);
+
+        this.passwordField.textProperty().addListener((obs, oldValue, newValue) -> {
+            if (newValue != null && newValue.matches(".*\\s+.*")) {
+                this.passwordField.setText(oldValue);
+            }
+        });
+
+        this.passwordPasswordField.textProperty().addListener((obs, oldValue, newValue) -> {
+            if (newValue != null && newValue.matches(".*\\s+.*")) {
+                this.passwordPasswordField.setText(oldValue);
+            }
+        });
     }
 
     @FXML
