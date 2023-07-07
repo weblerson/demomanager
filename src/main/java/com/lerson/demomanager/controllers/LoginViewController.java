@@ -26,6 +26,15 @@ public class LoginViewController {
     private PasswordField passwordField;
 
     @FXML
+    protected void initialize() {
+        this.usernameField.textProperty().addListener((obs, oldValue, newValue) -> {
+            if (newValue != null && newValue.matches(".*\\s+.*")) {
+                this.usernameField.setText(oldValue);
+            }
+        });
+    }
+
+    @FXML
     protected void submit() {
         String username = usernameField.getText();
         String hashPassword = SHA256.parse(passwordField.getText());
