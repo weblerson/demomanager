@@ -46,6 +46,18 @@ public class PasswordCreationViewController {
                 this.passwordPasswordField.setText(oldValue);
             }
         });
+
+        this.confirmPasswordField.textProperty().addListener((obs, oldValue, newValue) -> {
+            if (newValue != null && newValue.matches(".*\\s+.*")) {
+                this.confirmPasswordField.setText(oldValue);
+            }
+        });
+
+        this.confirmPasswordPasswordField.textProperty().addListener((obs, oldValue, newValue) -> {
+            if (newValue != null && newValue.matches(".*\\s+.*")) {
+                this.confirmPasswordPasswordField.setText(oldValue);
+            }
+        });
     }
 
     @FXML
