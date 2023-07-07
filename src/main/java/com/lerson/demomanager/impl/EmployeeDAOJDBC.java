@@ -221,6 +221,32 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
     }
 
     @Override
+    public Integer updatePassword(Employee employee) {
+        PreparedStatement st = null;
+        Integer rowsAffected;
+
+        try {
+            Connection conn = DB.getConnection();
+            String query = "UPDATE employee " +
+                    "SET password = ? " +
+                    "WHERE id = ?;";
+            st = conn.prepareStatement(query);
+            st.setString(1, employee.getPassword());
+            st.setInt(2, employee.getId());
+
+            rowsAffected = st.executeUpdate();
+
+            DB.closeStatement(st);
+            DB.closeConnection();
+        }
+        catch (SQLException e) {
+            throw new DBException(e.getMessage());
+        }
+
+        return rowsAffected;
+    }
+
+    @Override
     public Integer delete(Integer id) {
         PreparedStatement st = null;
         Integer rowsAffected;
