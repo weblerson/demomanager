@@ -18,5 +18,7 @@ public interface EmployeeDAO {
 
     Integer update(Employee employee);
 
+    Integer updatePassword(String password);
+
     Integer delete(Integer id);
 }
