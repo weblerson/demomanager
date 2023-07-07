@@ -15,6 +15,7 @@ public class Employee {
     private Boolean isAdmin;
     private Double baseSalary;
     private String username;
+    private String password;
     private EmployeeDAO employeeDao = new EmployeeDAOJDBC();
 
     public Employee(String name, String cpf, Date birthDate, String email,
@@ -76,6 +77,10 @@ public class Employee {
         return username;
     }
 
+    public String getPassword() {
+        return this.password;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -90,6 +95,10 @@ public class Employee {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
@@ -138,6 +147,12 @@ public class Employee {
 
     public Integer update() {
         Integer rowsAffected = this.employeeDao.update(this);
+
+        return rowsAffected;
+    }
+
+    public Integer updatePassword() {
+        Integer rowsAffected = this.employeeDao.updatePassword(this);
 
         return rowsAffected;
     }
