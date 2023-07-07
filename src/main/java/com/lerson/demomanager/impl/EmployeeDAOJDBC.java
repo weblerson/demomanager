@@ -281,8 +281,9 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
             Boolean isAdmin = rs.getBoolean("isadmin");
             Double baseSalary = rs.getDouble("basesalary");
             String username = rs.getString("username");
+            String password = rs.getString("password");
 
-            return new Employee(id, name, cpf, birthDate, email, isAdmin, baseSalary, username);
+            return new Employee(id, name, cpf, birthDate, email, isAdmin, baseSalary, username, password);
         }
         catch (SQLException e) {
             throw new DBException(e.getMessage());
