@@ -11,6 +11,10 @@ public class DBQuery <T> {
         return this.query;
     }
 
+    public T first() {
+        return this.query.get(0);
+    }
+
     public Boolean exists() {
         return this.query.size() > 0;
     }
