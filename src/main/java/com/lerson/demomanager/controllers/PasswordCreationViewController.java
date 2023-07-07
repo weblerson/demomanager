@@ -1,13 +1,20 @@
 package com.lerson.demomanager.controllers;
 
 import com.lerson.demomanager.entities.Employee;
+import com.lerson.demomanager.exceptions.SceneException;
 import com.lerson.demomanager.session.EmployeeSession;
+import com.lerson.demomanager.utils.FXMLPath;
 import com.lerson.demomanager.utils.SHA256;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class PasswordCreationViewController {
 
@@ -100,6 +107,11 @@ public class PasswordCreationViewController {
         Employee employee = new Employee().get(EmployeeSession.instance.getId());
         employee.setPassword(SHA256.parse(password));
         employee.updatePassword();
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, "Senha criada com sucesso!", ButtonType.OK);
+        alert.show();
+
+        raiseLoginView();
     }
 
     private void clearFields() {
@@ -107,5 +119,20 @@ public class PasswordCreationViewController {
         this.confirmPasswordField.clear();
         this.passwordPasswordField.clear();
         this.confirmPasswordPasswordField.clear();
+    }
+
+    private void raiseLoginView() {
+        FXMLLoader root = new FXMLLoader(getClass().getResource(FXMLPath.createFXMLPath("login-view.fxml")));
+        Stage window = (Stage) this.passwordField.getScene().getWindow();
+
+        try {
+            Scene scene = new Scene(root.load());
+            window.setTitle("Entrar");
+            window.setResizable(false);
+            window.setScene(scene);
+        }
+        catch (IOException e) {
+            throw new SceneException(e.getMessage());
+        }
     }
 }
