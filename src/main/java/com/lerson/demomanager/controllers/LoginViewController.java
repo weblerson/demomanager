@@ -9,10 +9,7 @@ import com.lerson.demomanager.utils.SHA256;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -30,6 +27,12 @@ public class LoginViewController {
         this.usernameField.textProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue != null && newValue.matches(".*\\s+.*")) {
                 this.usernameField.setText(oldValue);
+            }
+        });
+
+        this.passwordField.textProperty().addListener((obs, oldValue, newValue) -> {
+            if (newValue != null && newValue.matches(".*\\s+.*")) {
+                this.passwordField.setText(oldValue);
             }
         });
     }
